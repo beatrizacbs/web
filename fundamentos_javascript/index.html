@@ -1,54 +1,77 @@
 <html>
-    <header>
-        <title>Fundamentos Javascript</title>
-        <style>
-            form {
-                /* Just to center the form on the page */
-                margin: 0 auto;
-                /*width: 400px;
+  <header>
+    <title>Fundamentos Javascript</title>
+    <style>
+      form {
+        /* Just to center the form on the page */
+        margin: 0 auto;
+        /*width: 400px;
                 /* To see the outline of the form */
-                padding: 1em;
-                border: 1px solid #CCC;
-                border-radius: 1em;
-            }
+        padding: 1em;
+        border: 1px solid #ccc;
+        border-radius: 1em;
+      }
 
-            form div + div {
-                margin-top: 1em;
-            }
+      form div + div {
+        margin-top: 1em;
+      }
 
-            label {
-                /* To make sure that all labels have the same size and are properly aligned */
-                display: inline-block;
-                width: 90px;
-                text-align: right;
-            }
-        </style>        
-    </header>
-    <body>
-        <h1>Exemplo de manipulação de array e objetos em javascript</h1>
+      label {
+        /* To make sure that all labels have the same size and are properly aligned */
+        display: inline-block;
+        width: 90px;
+        text-align: right;
+      }
 
-        <form action="/js/script.js/addPerson()">
-            <p>Por favor, preencha os dados abaixo: </p>
-            <div>
-                <label>CPF:</label>
-                <input type="text" id="cpf" name="cpf"/>
-            </div>
-            <div>
-                <label>Nome:</label>
-                <input type="text" id="nome" name="nome"/>
-            </div>
-            <div>
-                <label>Cargo:</label>
-                <input type="text" id="cargo" name="cargo"/>
-            </div>
-            <div>
-                <label>Salário</label>
-                <input type="text" id="salario" name="salario"/>
-            </div>
-            <div class="button">
-                <button type="submit">Adicionar</button>
-            </div>
+      table, th, td {
+        border: 1px solid black;
+    }   
+    </style>
+  </header>
+  <body>
+    <h1>Exemplo de manipulação de array e objetos em javascript</h1>
 
-        </form>
-    </body>
+    <form name="form" method="post" onsubmit="addPerson()">
+      <p>Por favor, preencha os dados abaixo:</p>
+      <div>
+        <label>CPF:</label>
+        <input type="text" id="cpf" name="cpf" />
+      </div>
+      <div>
+        <label>Nome:</label>
+        <input type="text" id="nome" name="nome" />
+      </div>
+      <div>
+        <label>Cargo:</label>
+        <input type="text" id="cargo" name="cargo" />
+      </div>
+      <div>
+        <label>Salário</label>
+        <input type="text" id="salario" name="salario" />
+      </div>
+      <div class="button">
+        <button type="submit">Adicionar</button>
+      </div>
+    </form>
+
+    <h1>Lista de Funcioários</h1>
+
+    <div id="filtros">
+      <button id="order_by_cpf">Ordenar por CPF</button>
+      <button id="order_by_name">Ordenar por Nome</button>
+      <button id="order_by_salary">Ordenar por Salário</button>
+    </div>
+
+    <table>
+      <tr>
+        <th>Cpf</th>
+        <th>Nome</th>
+        <th>Cargo</th>
+        <th>Salario</th>
+        <th></th>
+      </tr>
+    </table>
+
+    <script src="./app.js" type="text/javascript"></script>
+  </body>
 </html>
